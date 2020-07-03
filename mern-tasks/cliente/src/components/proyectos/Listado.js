@@ -14,7 +14,7 @@ const Listado = () => {
     }, []
   );
 
-  if (!proyectos.length) return null;
+  if (!proyectos.length) return <p>No tienes ningún proyecto</p>;
 
   return (
     <div>
