@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d05c5b9-b06d-4181-a22f-0cec1a6c66af" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basicos" beforeDir="false" afterPath="$PROJECT_DIR$/basicos" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basicos/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/basicos/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/basicos/src/App.css" beforeDir="false" />
@@ -40,11 +39,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mern-tasks/servidor/controllers/usuarioController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+            <state relative-caret-position="300">
+              <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mern-tasks/servidor/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="14" selection-start-column="14" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/mern-tasks/servidor/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -53,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/mern-tasks/servidor/routes/usuarios.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="160">
-              <caret line="8" column="80" lean-forward="true" selection-start-line="8" selection-start-column="80" selection-end-line="8" selection-end-column="80" />
+              <caret line="8" column="80" selection-start-line="8" selection-start-column="80" selection-end-line="8" selection-end-column="80" />
             </state>
           </provider>
         </entry>
@@ -71,7 +88,7 @@
         <entry file="file://$PROJECT_DIR$/mern-tasks/servidor/variables.env">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="20">
-              <caret line="1" column="22" lean-forward="true" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+              <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -105,7 +122,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/noticias/src/components/Formulario.module.css" />
         <option value="$PROJECT_DIR$/noticias/README.md" />
         <option value="$PROJECT_DIR$/noticias/src/hooks/useSelect.js" />
         <option value="$PROJECT_DIR$/noticias/src/App.js" />
@@ -156,6 +172,7 @@
         <option value="$PROJECT_DIR$/mern-tasks/servidor/routes/usuarios.js" />
         <option value="$PROJECT_DIR$/mern-tasks/servidor/variables.env" />
         <option value="$PROJECT_DIR$/mern-tasks/servidor/controllers/usuarioController.js" />
+        <option value="$PROJECT_DIR$/mern-tasks/servidor/.gitignore" />
       </list>
     </option>
   </component>
@@ -190,13 +207,6 @@
               <item name="react-course" type="462c0819:PsiDirectoryNode" />
               <item name="mern-tasks" type="462c0819:PsiDirectoryNode" />
               <item name="servidor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-course" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-course" type="462c0819:PsiDirectoryNode" />
-              <item name="mern-tasks" type="462c0819:PsiDirectoryNode" />
-              <item name="servidor" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -242,16 +252,15 @@
       <workItem from="1593565230319" duration="4645000" />
       <workItem from="1593630808692" duration="55000" />
       <workItem from="1593743030620" duration="5001000" />
-      <workItem from="1593820607858" duration="15927000" />
+      <workItem from="1593820607858" duration="16240000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45568000" />
+    <option name="totallyTimeSpent" value="45881000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1681" y="23" width="1920" height="1057" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18373813" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -295,23 +304,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/noticias/src/components/Formulario.module.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/noticias/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="20">
-            <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/noticias/src/components/Header.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
@@ -686,13 +678,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mern-tasks/servidor/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="21" column="3" lean-forward="true" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mern-tasks/servidor/config/db.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -717,21 +702,38 @@
     <entry file="file://$PROJECT_DIR$/mern-tasks/servidor/routes/usuarios.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
-          <caret line="8" column="80" lean-forward="true" selection-start-line="8" selection-start-column="80" selection-end-line="8" selection-end-column="80" />
+          <caret line="8" column="80" selection-start-line="8" selection-start-column="80" selection-end-line="8" selection-end-column="80" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mern-tasks/servidor/variables.env">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
-          <caret line="1" column="22" lean-forward="true" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mern-tasks/servidor/controllers/usuarioController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
+        <state relative-caret-position="300">
+          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mern-tasks/cliente/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mern-tasks/servidor/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" selection-start-column="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mern-tasks/servidor/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
         </state>
       </provider>
     </entry>
