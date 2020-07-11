@@ -34,7 +34,8 @@ exports.crearTarea = async (req, res) => {
 
 exports.obtenerTareas = async (req, res) => {
 
-  const {proyecto: proyectoID} = req.body;
+  //const {proyecto: proyectoID} = req.body;
+  const {proyecto: proyectoID} = req.query;
 
   try {
     const proyecto = await Proyecto.findById(proyectoID);
@@ -43,7 +44,7 @@ exports.obtenerTareas = async (req, res) => {
       return res.status(404).json({msg: 'Proyecto no encontrado'});
     }
 
-    const tareas = await Tarea.find({proyecto: proyectoID});
+    const tareas = await Tarea.find({proyecto: proyectoID}).sort({creado: -1});
     return res.json({tareas});
 
   } catch (error) {
@@ -70,14 +71,8 @@ exports.actualizarTarea = async (req, res) => {
 
 
     const nuevaTarea = {};
-
-    if (nombre) {
-      nuevaTarea.nombre = nombre
-    }
-
-    if (estado) {
-      nuevaTarea.estado = estado;
-    }
+    nuevaTarea.nombre = nombre;
+    nuevaTarea.estado = estado;
 
     tarea = await Tarea.findOneAndUpdate({_id: req.params.id}, nuevaTarea, {new: true});
 
@@ -91,7 +86,7 @@ exports.actualizarTarea = async (req, res) => {
 
 exports.eliminarTarea = async (req, res) => {
   try {
-    const {proyecto: proyectoID} = req.body;
+    const {proyecto: proyectoID} = req.query;
 
     let tarea = await Tarea.findById(req.params.id);
 

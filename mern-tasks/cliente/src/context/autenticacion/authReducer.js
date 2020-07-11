@@ -37,5 +37,7 @@ export default (state, action) => {
         autenticado: true,
         cargando: false,
       };
+    default:
+      return state;
   }
 }

@@ -13,14 +13,15 @@ const NuevaCuenta = (props) => {
 
   useEffect(
     () => {
-      //console.log("UE: ", autenticado);
-      if(autenticado){
+      if (autenticado) {
         props.history.push('/proyectos');
       }
 
-      if(mensaje){
+      if (mensaje) {
         mostrarAlerta(mensaje.msg, mensaje.categoria);
       }
+
+      // eslint-disable-next-line
     }, [mensaje, autenticado, props.history],
   );
 
