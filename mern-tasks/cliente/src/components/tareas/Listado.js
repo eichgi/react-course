@@ -38,7 +38,7 @@ const Listado = () => {
         {component}
       </ul>
 
-      <button type="button" className="btn btn-eliminar" onClick={() => eliminarProyecto(proyectoActual.id)}>Eliminar
+      <button type="button" className="btn btn-eliminar" onClick={() => eliminarProyecto(proyectoActual._id)}>Eliminar
         proyecto &times;</button>
     </Fragment>
   );
