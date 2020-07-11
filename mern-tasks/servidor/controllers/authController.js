@@ -43,3 +43,20 @@ exports.autenticarUsuario = async (req, res) => {
 
   }
 };
+
+exports.usuarioAutenticado = async (req, res) => {
+  try {
+    const usuario = await Usuario.findById(req.usuario.id).select('-password');
+
+    if (!usuario) {
+      return res.status(500).json({msg: 'Usuario inexistente'});
+    }
+
+    return res.json({usuario});
+
+  } catch (error) {
+    console.log(error);
+
+    return res.status(500).json({msg: 'Hubo un error'});
+  }
+};
