@@ -12,10 +12,9 @@ import {
     COMENZAR_EDICION_PRODUCTO,
     PRODUCTO_EDITADO_ERROR,
     PRODUCTO_EDITADO_EXITO,
-} from './../types';
+} from '../types';
 import clienteAxios from "../config/axios";
 import Swal from 'sweetalert2';
-import productosReducer from "../reducers/productosReducer";
 
 // crear nuevo producto
 export function crearNuevoProductoAction(producto) {
@@ -138,22 +137,27 @@ const obtenerProductoAction = (producto) => ({
 //Edita un registro en la API
 export function editarProductoAction(producto) {
     return async (dispatch) => {
-        dispatch(editarProducto(producto));
+        dispatch(editarProducto());
 
         try {
             await clienteAxios.put(`/productos/${producto.id}`, producto);
             dispatch(editarProductoExito(producto));
         } catch (error) {
-
+            dispatch(editarProductoError());
         }
     };
 }
 
-const editarProducto = (producto) => ({
+const editarProducto = () => ({
     type: COMENZAR_EDICION_PRODUCTO,
 });
 
 const editarProductoExito = (producto) => ({
     type: PRODUCTO_EDITADO_EXITO,
     payload: producto,
+});
+
+const editarProductoError = () => ({
+    type: PRODUCTO_EDITADO_ERROR,
+    payload: true,
 });
