@@ -2,7 +2,7 @@
   "productos": [
     {
       "nombre": "Rib Eye",
-      "precio": 500,
+      "precio": "1000",
       "id": 6
     },
     {
@@ -17,7 +17,7 @@
     },
     {
       "nombre": "Naranjada Mineral",
-      "precio": 25,
+      "precio": "10",
       "id": 9
     }
   ]
