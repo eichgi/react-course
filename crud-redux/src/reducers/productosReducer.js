@@ -3,7 +3,11 @@ import {
     AGREGAR_PRODUCTO_EXITO,
     AGREGAR_PRODUCTO_ERROR,
     COMENZAR_DESCARGA_PRODUCTOS,
-    DESCARGA_PRODUCTOS_EXITO, DESCARGA_PRODUCTOS_ERROR,
+    DESCARGA_PRODUCTOS_EXITO,
+    DESCARGA_PRODUCTOS_ERROR,
+    PRODUCTO_ELIMINADO_ERROR,
+    PRODUCTO_ELIMINADO_EXITO,
+    OBTENER_PRODUCTO_ELIMINAR,
 } from './../types';
 
 // cada reducer tiene su propio state
@@ -11,6 +15,7 @@ const initialState = {
     productos: [],
     error: false,
     loading: false,
+    productEliminar: null,
 };
 
 export default function (state = initialState, action) {
@@ -27,6 +32,7 @@ export default function (state = initialState, action) {
                 loading: false,
                 productos: [...state.productos, action.payload],
             };
+        case PRODUCTO_ELIMINADO_ERROR:
         case DESCARGA_PRODUCTOS_ERROR:
         case AGREGAR_PRODUCTO_ERROR:
             return {
@@ -40,6 +46,17 @@ export default function (state = initialState, action) {
                 productos: action.payload,
                 loading: false,
                 error: false,
+            };
+        case OBTENER_PRODUCTO_ELIMINAR:
+            return {
+                ...state,
+                productEliminar: action.payload,
+            };
+        case PRODUCTO_ELIMINADO_EXITO:
+            return {
+                ...state,
+                productos: state.productos.filter(producto => producto.id !== state.productEliminar),
+                productEliminar: null,
             };
         default:
             return state;
