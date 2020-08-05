@@ -29,7 +29,6 @@ const Login = () => {
   const {email, password} = valores;
 
   async function iniciarSesion() {
-    console.log("iniciar sesion");
     try {
       const usuario = await firebase.iniciarSesion(email, password);
       Router.push('/');
