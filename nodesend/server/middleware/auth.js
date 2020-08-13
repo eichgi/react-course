@@ -11,7 +11,7 @@ module.exports = (req, res, next) => {
   const token = authHeader.split(" ")[1];
   try {
     req.usuario = jwt.verify(token, process.env.SECRETA);
-    res.json({usuario: req.usuario});
+    next();
   } catch (error) {
     res.status(401).json({msg: 'Token inválido'});
   }

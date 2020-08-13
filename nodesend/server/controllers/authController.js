@@ -41,5 +41,5 @@ exports.autenticarUsuario = async (req, res, next) => {
 };
 
 exports.usuarioAutenticado = (req, res) => {
-  console.log(req.usuario);
+  return res.json({usuario: req.usuario});
 };
