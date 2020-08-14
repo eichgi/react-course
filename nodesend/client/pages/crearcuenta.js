@@ -1,16 +1,21 @@
-import React from 'react';
+import React, {useContext, useEffect} from 'react';
 import Layout from "../components/Layout";
 import {useFormik} from 'formik';
 import * as Yup from 'yup';
+import authContext from "../context/auth/authContext";
+import Alerta from "../components/Alerta";
 
 const CrearCuenta = () => {
+
+  const AuthContext = useContext(authContext);
+  const {mensaje, registrarUsuario} = AuthContext;
 
   //Form and validation with Formik & yup
   const formik = useFormik({
     initialValues: {
-      nombre: 'Prro awayo',
-      email: '',
-      password: '',
+      nombre: 'Hiram',
+      email: 'hiramg90@gmail.com',
+      password: '123456',
     },
     validationSchema: Yup.object({
       nombre: Yup.string().required('El nombre es obligatorio'),
@@ -18,7 +23,7 @@ const CrearCuenta = () => {
       password: Yup.string().required('El password es obligatorio').min(6, 'Mínimo 6 caracteres'),
     }),
     onSubmit: (valores) => {
-      console.log("Enviando form", valores);
+      registrarUsuario(valores);
     }
   });
 
@@ -26,6 +31,10 @@ const CrearCuenta = () => {
     <Layout>
       <div className="md:w-4/5 xl:w-3/5 mx-auto mb-32">
         <h2 className="text-4xl font-sans font-bold text-gray-800 text-center my-4">Crear cuenta</h2>
+        {mensaje
+          ? <Alerta />
+          : null
+        }
         <div className="flex justify-center mt-5">
           <div className="w-full max-w-lg">
             <form className="bg-white rounded shadow-md px-8 pt-6 pb-8 mb-4" onSubmit={formik.handleSubmit}>
