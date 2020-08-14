@@ -39,3 +39,29 @@ exports.nuevoEnlace = async (req, res, next) => {
     console.log(error)
   }
 };
+
+//create link
+exports.obtenerEnlace = async (req, res, next) => {
+  const {url} = req.params;
+
+  const enlace = await Enlaces.findOne({url});
+
+  if (!enlace) {
+    res.status(404).json({msg: 'Enlace inexistente'});
+  }
+
+  res.json({archivo: enlace.nombre});
+
+  if (enlace.descargas === 1) {
+
+    //Delete file & link
+    req.archivo = enlace.nombre_original;
+    await Enlaces.findOneAndRemove({url});
+
+    next();
+
+  } else {
+    enlace.descargas--;
+    await enlace.save();
+  }
+};
