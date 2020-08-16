@@ -11,10 +11,10 @@ exports.nuevoEnlace = async (req, res, next) => {
   }
 
   //Store link
-  const {nombre_original} = req.body;
+  const {nombre_original, nombre} = req.body;
   const enlace = new Enlaces();
   enlace.url = shortid.generate();
-  enlace.nombre = shortid.generate();
+  enlace.nombre = nombre;
   enlace.nombre_original = nombre_original;
 
   if (req.usuario) {
