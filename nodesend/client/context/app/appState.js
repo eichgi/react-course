@@ -8,6 +8,7 @@ import {
   LIMPIAR_ALERTA,
   SUBIR_ARCHIVO,
   LIMPIAR_STATE,
+  AGREGAR_PASSWORD, AGREGAR_DESCARGAS,
 } from "../../types";
 import appContext from "./appContext";
 import appReducer from "./appReducer";
@@ -97,6 +98,21 @@ const AppState = ({children}) => {
     });
   };
 
+  const agregarPassword = (password) => {
+    dispatch({
+      type: AGREGAR_PASSWORD,
+      payload: password,
+    });
+  };
+
+  const agregarDescargas = (descargas) => {
+    console.log(descargas)
+    dispatch({
+      type: AGREGAR_DESCARGAS,
+      payload: descargas,
+    });
+  }
+
   return (
     <appContext.Provider
       value={{
@@ -112,6 +128,8 @@ const AppState = ({children}) => {
         subirArchivo,
         crearEnlace,
         limpiarState,
+        agregarPassword,
+        agregarDescargas,
       }}
     >
       {children}
