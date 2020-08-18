@@ -7,6 +7,7 @@ import {
   CREAR_ENLACE_EXITO,
   LIMPIAR_ALERTA,
   SUBIR_ARCHIVO,
+  LIMPIAR_STATE,
 } from "../../types";
 import appContext from "./appContext";
 import appReducer from "./appReducer";
@@ -89,6 +90,13 @@ const AppState = ({children}) => {
     }
   };
 
+  const limpiarState = () => {
+    console.log("limpiando...")
+    dispatch({
+      type: LIMPIAR_STATE,
+    });
+  };
+
   return (
     <appContext.Provider
       value={{
@@ -103,6 +111,7 @@ const AppState = ({children}) => {
         mostrarAlerta,
         subirArchivo,
         crearEnlace,
+        limpiarState,
       }}
     >
       {children}

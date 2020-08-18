@@ -15,6 +15,9 @@ const port = process.env.PORT || 4000;
 
 app.use(express.json());
 
+//Enable public folder
+app.use(express.static('uploads'));
+
 app.use('/api/usuarios', require('./routes/usuarios'));
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/enlaces', require('./routes/enlaces'));

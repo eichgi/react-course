@@ -40,9 +40,20 @@ exports.nuevoEnlace = async (req, res, next) => {
   }
 };
 
+exports.todosEnlaces = async (req, res) => {
+  try {
+    const enlaces = await Enlaces.find({}).select('url -_id');
+
+    res.json({enlaces});
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 //create link
 exports.obtenerEnlace = async (req, res, next) => {
   const {url} = req.params;
+  console.log(url);
 
   const enlace = await Enlaces.findOne({url});
 
@@ -52,16 +63,5 @@ exports.obtenerEnlace = async (req, res, next) => {
 
   res.json({archivo: enlace.nombre});
 
-  if (enlace.descargas === 1) {
-
-    //Delete file & link
-    req.archivo = enlace.nombre_original;
-    await Enlaces.findOneAndRemove({url});
-
-    next();
-
-  } else {
-    enlace.descargas--;
-    await enlace.save();
-  }
+  next();
 };

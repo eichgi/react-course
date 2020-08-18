@@ -1,22 +1,32 @@
 import React, {useContext, useEffect} from 'react';
 import Link from "next/link";
 import authContext from "../context/auth/authContext";
+import appContext from "../context/app/appContext";
+import {useRouter} from "next/router";
 
 const Header = () => {
 
   const AuthContext = useContext(authContext);
   const {usuario, usuarioAutenticado, cerrarSesion} = AuthContext;
 
+  const AppContext = useContext(appContext);
+  const {limpiarState} = AppContext;
+
+  const router = useRouter();
+
   useEffect(() => {
     usuarioAutenticado();
   }, []);
 
+  const redireccionar = () => {
+    router.push('/');
+    limpiarState();
+  };
+
   return (
     <div>
       <header className="py-8 flex flex-col md:flex-row items-center justify-between">
-        <Link href="/">
-          <img src="/logo.svg" className="w-64 mb-8 md:mb-0"/>
-        </Link>
+        <img onClick={() => redireccionar()} src="/logo.svg" className="w-64 mb-8 md:mb-0 cursor-pointer"/>
 
         <div>
           {
@@ -25,7 +35,7 @@ const Header = () => {
                 <div className="flex items-center">
                   <p className="mr-2">Hola {usuario.nombre}</p>
                   <button type="button" className="bg-black px-5 py-3 rounded text-white font-bold uppercase"
-                  onClick={() => cerrarSesion()}>Cerrar
+                          onClick={() => cerrarSesion()}>Cerrar
                     sesión
                   </button>
                 </div>
